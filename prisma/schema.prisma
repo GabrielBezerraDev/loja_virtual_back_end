@@ -10,11 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model product{
-  name String @unique
+model Product{
   id Int @id @default(autoincrement())
+  name String
+  codeProduct String?  
   price Float
-  amountStock Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @default(now())
+  description String
 }
