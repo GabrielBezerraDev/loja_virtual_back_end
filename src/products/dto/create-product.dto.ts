@@ -4,4 +4,5 @@ export class CreateProductDto {
   codeProduct?: string;
   description: string;
   imgBase64: string;
+  category: string;
 }
