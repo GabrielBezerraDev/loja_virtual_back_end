@@ -13,13 +13,15 @@ export class ProductsService {
 
   create(createProductDto: CreateProductDto) {
     createProductDto.codeProduct = this.generateCodeProduct.getCodeProduct();
+    console.log(createProductDto);
     return this.prismaService.product.create({
       data: createProductDto
     });
   }
 
-  findAll() {
-    return `This action returns all products`;
+  async findAll() {
+    console.log(await this.prismaService.product.findMany());
+    return await this.prismaService.product.findMany();
   }
 
   findOne(id: number) {

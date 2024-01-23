@@ -13,8 +13,8 @@ export class ProductsController {
   }
 
   @Get()
-  findAll() {
-    return JSON.stringify("TESTE");
+  async findAll() {
+    return JSON.stringify(await this.productsService.findAll());
   }
 
   @Get(':id')

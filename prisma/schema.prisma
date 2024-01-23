@@ -16,4 +16,5 @@ model Product{
   codeProduct String?  
   price Float
   description String
+  imgBase64 String @db.LongText
 }
