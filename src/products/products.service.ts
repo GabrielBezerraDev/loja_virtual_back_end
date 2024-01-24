@@ -12,8 +12,6 @@ export class ProductsService {
     ) {}
 
   create(createProductDto: CreateProductDto) {
-    createProductDto.codeProduct = this.generateCodeProduct.getCodeProduct();
-    console.log(createProductDto);
     return this.prismaService.product.create({
       data: createProductDto
     });
@@ -33,10 +31,19 @@ export class ProductsService {
   }
 
   update(id: number, updateProductDto: UpdateProductDto) {
-    return `This action updates a #${id} product`;
+    return this.prismaService.product.update({
+      where: {
+        id: id
+      },
+      data: updateProductDto
+    });
   }
 
   remove(id: number) {
     return `This action removes a #${id} product`;
+  }
+
+  getCodeProduct():string{
+    return this.generateCodeProduct.getCodeProduct();
   }
 }

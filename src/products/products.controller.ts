@@ -17,7 +17,7 @@ export class ProductsController {
     return JSON.stringify(await this.productsService.findAll());
   }
 
-  @Get(':id')
+  @Get('get/:id')
   findOne(@Param('id') id: string) {
     return this.productsService.findOne(+id);
   }
@@ -30,5 +30,10 @@ export class ProductsController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.productsService.remove(+id);
+  }
+
+  @Get("/codeProduct")
+   codeProduct() {
+    return JSON.stringify(this.productsService.getCodeProduct());
   }
 }

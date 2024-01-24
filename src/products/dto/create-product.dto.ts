@@ -1,7 +1,8 @@
 export class CreateProductDto {
+  id: number;
   name: string;
   price: number;
-  codeProduct?: string;
+  codeProduct: string;
   description: string;
   imgBase64: string;
   category: string;
