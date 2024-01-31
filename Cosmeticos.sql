@@ -1,3 +1,4 @@
+SET NAMES utf8;
 USE nest;
 
 DELETE FROM Product WHERE category="Cosmeticos";
