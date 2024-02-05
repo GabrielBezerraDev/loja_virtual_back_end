@@ -1,73 +1,44 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+# Desafio Best Minds
+<p>
+  Este projeto destina-se ao processo seletivo Best Minds 2024, que envolve a construção de um CRUD para um e-commerce de uma loja de esportes denominada Nunes Esporte.
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# O que utilizei para este projeto?
+No processo seletivo, tive a liberdade de escolher as tecnologias que considerasse mais adequadas, e optei por utilizar ferramentas com as quais já estava familiarizado. Para o desenvolvimento do back-end, escolhi o Nest.js, uma estrutura robusta e eficiente. Além disso, empreguei outras tecnologias conforme as necessidades do projeto, como o Angular para o front-end, Docker para automatização e padronização do ambiente do back-end, uma imagem Docker MySQL para a persistência de dados e scripts shell para facilitar a inicialização do projeto.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+O desenvolvimento do projeto levou aproximadamente um mês, durante o qual busquei atender de forma completa aos requisitos propostos no desafio. Embora reconheça que sempre há espaço para melhorias, estou confiante de que o projeto atendeu de maneira muito satisfatória às expectativas, cumprindo os critérios estabelecidos. 
 
-## Description
+# Pré-requisitos para mexer no projeto
+É necessário seguir alguns passos antes de tentar mexer no sistema:
+1. O projeto foi projetado para operar em um ambiente Linux. Se você estiver utilizando um sistema Windows, é altamente recomendável optar pelo WSL (Windows Subsystem for Linux) para garantir a compatibilidade.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+2. Certifique-se de que o Node.js esteja instalado em sua máquina, pois é um requisito essencial para o funcionamento do projeto.
 
-## Installation
+3. O usuário responsável por executar o sistema deve garantir que o Docker e o Docker-compose estejam devidamente instalados em sua máquina..
 
-```bash
-$ npm install
-```
+4. Adicionalmente, é necessário instalar a biblioteca gnome-terminal. Essa biblioteca desempenha um papel crucial no projeto, automatizando a criação de entidades no banco de dados. Certifique-se de que essa biblioteca esteja instalada para evitar problemas relacionados a essa funcionalidade específica do sistema.
 
-## Running the app
+# Rondando o sistema
+Após instalar todas depêndencias do projeto, agora segue os passos para rodá-lo:
+1. Utilize o comando `npm install` para instalar as dependências do node_modules.
 
-```bash
-# development
-$ npm run start
+2. Abra o terminal no diretório relativo do projeto que contém [os scripts shell para a execução do sistema](./shell).
 
-# watch mode
-$ npm run start:dev
+3. No terminal, dentro da pasta dos scripts, execute o comando ` chmod +x start.sh` para conceder permissões de execução ao script, tornando-o compatível com o bash ou qualquer outro interpretador que esteja utilizando.
 
-# production mode
-$ npm run start:prod
-```
+4. Execute `docker-compose up` para realizar a construção das imagens necessárias para o sistema.
 
-## Test
+5. Após a conclusão do build das imagens e os containers no ar, execute `./start.sh` no seu terminal.
 
-```bash
-# unit tests
-$ npm run test
+# Como interromper o Back-end?
+Caso deseje encerrar a execução do back-end, basta utilizar o comando `docker-compose down`. Este comando é suficiente para interromper completamente o sistema. Se houver a necessidade de reiniciar o sistema posteriormente, utilize simplesmente o script [./start](./shell), conforme mencionado no tópico anterior. Este procedimento proporciona uma maneira direta e eficaz de gerenciar o ciclo de vida do back-end, permitindo uma parada e reinício sem complicações.
 
-# e2e tests
-$ npm run test:e2e
+> [!WARNING]
+> Se você apagar as imagens relacionadas ao docker-compose deste sistema, para roda-lo novamente será necessário prosseguir do passo **4** do tópico **"Rodando o sitema"**.
 
-# test coverage
-$ npm run test:cov
-```
+# Conslusão
+Após esse procedimento, o sistema estará pronto para ser acessado. Basta clonar e executar o repositório [Front-end](https://github.com/GabrielBezerraDev/loja_virtual-front_end).
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
