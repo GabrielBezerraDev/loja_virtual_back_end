@@ -1,6 +1,6 @@
 # Desafio Best Minds
 <p>
-  Este projeto destina-se ao processo seletivo Best Minds 2024, que envolve a construção de um CRUD para um e-commerce de uma loja de esportes denominada Nunes Esporte.
+  Este projeto destina-se ao processo seletivo Best Minds 2024, que envolve a construção de um CRUD para um e-commerce, uma loja de esportes denominada Nunes Esporte.
 </p>
 
 # O que utilizei para este projeto?
@@ -20,15 +20,17 @@ O desenvolvimento do projeto levou aproximadamente um mês, durante o qual busqu
 
 # Rondando o sistema
 Após instalar todas depêndencias do projeto, agora segue os passos para rodá-lo:
-1. Utilize o comando `npm install` para instalar as dependências do node_modules.
+1. Clone o projeto com o comando `git clone https://github.com/GabrielBezerraDev/loja_virtual_back_end.git`.
+   
+2. Utilize o comando `npm install` para instalar as dependências do node_modules.
 
-2. Abra o terminal no diretório relativo do projeto que contém [os scripts shell para a execução do sistema](./shell).
+3. Abra o terminal no diretório relativo do projeto que contém [os scripts shell para a execução do sistema](./shell).
 
-3. No terminal, dentro da pasta dos scripts, execute o comando ` chmod +x start.sh` para conceder permissões de execução ao script, tornando-o compatível com o bash ou qualquer outro interpretador que esteja utilizando.
+4. No terminal, dentro da pasta dos scripts, execute o comando ` chmod +x start.sh` para conceder permissões de execução ao script, tornando-o compatível com o bash ou qualquer outro interpretador que esteja utilizando.
 
-4. Execute `docker-compose up` para realizar a construção das imagens necessárias para o sistema.
+5. Execute `docker-compose up` para realizar a construção das imagens necessárias para o sistema.
 
-5. Após a conclusão do build das imagens e os containers no ar, execute `./start.sh` no seu terminal.
+6. Após a conclusão do build das imagens e os containers no ar, execute `./start.sh` no seu terminal.
 
 # Como interromper o Back-end?
 Caso deseje encerrar a execução do back-end, basta utilizar o comando `docker-compose down`. Este comando é suficiente para interromper completamente o sistema. Se houver a necessidade de reiniciar o sistema posteriormente, utilize simplesmente o script [./start](./shell), conforme mencionado no tópico anterior. Este procedimento proporciona uma maneira direta e eficaz de gerenciar o ciclo de vida do back-end, permitindo uma parada e reinício sem complicações.
