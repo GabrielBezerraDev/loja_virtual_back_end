@@ -14,13 +14,9 @@ O desenvolvimento do projeto levou aproximadamente um mês, durante o qual busqu
 
 2. Certifique-se de que o Node.js esteja instalado em sua máquina, pois é um requisito essencial para o funcionamento do projeto.
 
-3. O usuário responsável por executar o sistema deve garantir que o Docker e o Docker-compose estejam devidamente instalados em sua máquina..
+3. O usuário responsável por executar o sistema deve garantir que o Docker e o Docker-compose estejam devidamente instalados em sua máquina.
 
-4. O usuário precisa dá acesso root no seu sistema linux para o docker, (assim os scripts shell seram executados sem problemas).
-   - Neste artigo da própria documentação do docker, demonstra como fazer isto:
-    [ Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
 
-6. Adicionalmente, é necessário instalar a biblioteca gnome-terminal. Essa biblioteca desempenha um papel crucial no projeto, automatizando a criação de entidades no banco de dados. Certifique-se de que essa biblioteca esteja instalada para evitar problemas relacionados a essa funcionalidade específica do sistema.
 
 # Rondando o sistema
 Após instalar todas depêndencias do projeto, agora segue os passos para rodá-lo:
@@ -30,11 +26,14 @@ Após instalar todas depêndencias do projeto, agora segue os passos para rodá-
 
 3. Abra o terminal no diretório relativo do projeto que contém [os scripts shell para a execução do sistema](./shell).
 
-4. No terminal, dentro da pasta dos scripts, execute o comando ` chmod +x start.sh` para conceder permissões de execução ao script, tornando-o compatível com o bash ou qualquer outro interpretador que esteja utilizando.
+4. No terminal, dentro da pasta dos scripts, execute o comando ` chmod u+x start.sh` para conceder permissões de execução ao script, tornando-o compatível com o bash ou qualquer outro interpretador que esteja utilizando.
 
 5. Execute `docker-compose up` para realizar a construção das imagens necessárias para o sistema.
 
 6. Após a conclusão do build das imagens e os containers no ar, execute `./start.sh` no seu terminal.
+
+> [!WARNING]
+> Se o terminal acusar um erro relacionado ao **nest**, instale o nestjs pelo npm, com o comando no terminal `npm i @nestjs/core`.
 
 # Como interromper o Back-end?
 Caso deseje encerrar a execução do back-end, basta utilizar o comando `docker-compose down`. Este comando é suficiente para interromper completamente o sistema. Se houver a necessidade de reiniciar o sistema posteriormente, utilize simplesmente o script [./start](./shell), conforme mencionado no tópico anterior. Este procedimento proporciona uma maneira direta e eficaz de gerenciar o ciclo de vida do back-end, permitindo uma parada e reinício sem complicações.
