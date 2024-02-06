@@ -16,7 +16,11 @@ O desenvolvimento do projeto levou aproximadamente um mês, durante o qual busqu
 
 3. O usuário responsável por executar o sistema deve garantir que o Docker e o Docker-compose estejam devidamente instalados em sua máquina..
 
-4. Adicionalmente, é necessário instalar a biblioteca gnome-terminal. Essa biblioteca desempenha um papel crucial no projeto, automatizando a criação de entidades no banco de dados. Certifique-se de que essa biblioteca esteja instalada para evitar problemas relacionados a essa funcionalidade específica do sistema.
+4. O usuário precisa dá acesso root no seu sistema linux para o docker, (assim os scripts shell seram executados sem problemas).
+   - Neste artigo da própria documentação do docker, demonstra como fazer isto:
+    [ Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
+
+6. Adicionalmente, é necessário instalar a biblioteca gnome-terminal. Essa biblioteca desempenha um papel crucial no projeto, automatizando a criação de entidades no banco de dados. Certifique-se de que essa biblioteca esteja instalada para evitar problemas relacionados a essa funcionalidade específica do sistema.
 
 # Rondando o sistema
 Após instalar todas depêndencias do projeto, agora segue os passos para rodá-lo:
