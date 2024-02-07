@@ -20,10 +20,10 @@ O desenvolvimento do projeto levou aproximadamente um mês, durante o qual busqu
 
   <ol type=a>
     <li>
-      * Criar uma instância do seu terminal e dá acesso de privilégios de usuário com o comando `sudo -i`.
+      - Criar uma instância do seu terminal e dá acesso de privilégios de usuário com o comando `sudo -i`.
     </li>
     <li>
-      * Dá privilégios de super user para o **Docker**.
+      - Dá privilégios de super user para o **Docker**.
     </li>
   </ol>
 
