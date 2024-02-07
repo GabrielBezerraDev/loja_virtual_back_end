@@ -16,7 +16,19 @@ O desenvolvimento do projeto levou aproximadamente um mês, durante o qual busqu
 
 3. O usuário responsável por executar o sistema deve garantir que o Docker e o Docker-compose estejam devidamente instalados em sua máquina.
 
+4. O usuário deve dá permissão de **Super user** no seu sistema para rodar o scripts shell com docker sem problema. Sugiro duas alternativas:
 
+  <ol>
+    <li>
+      a) Criar uma instância do seu terminal e dá acesso de privilégios de usuário com o comando `sudo -i`.
+    </li>
+    <li>
+      b) Dá privilégios de super user para o **Docker**.
+    </li>
+  </ol>
+
+> [!WARNING]
+> Se você escolher a opção **a**, terá que fazer isso toda vez que quiser rodar o script ./start.sh. É um pouco mais trabalhoso porque não vai acontecer automaticamente; você vai ter que fazer manualmente em cada execução do script.
 
 # Rondando o sistema
 Após instalar todas depêndencias do projeto, agora segue os passos para rodá-lo:
