@@ -49,6 +49,17 @@ Caso deseje encerrar a execução do back-end, basta utilizar o comando `docker-
 > [!WARNING]
 > Se você apagar as imagens relacionadas ao docker-compose deste sistema, para roda-lo novamente será necessário prosseguir do passo **4** do tópico **"Rodando o sitema"**.
 
+# Sobre as imagens Docker
+Este projeto contém 3 imagens que gerenciam todo o back-end do sistema, a imagem Node que é está armezanado na fonte do projeto, a imagem MySQL que é feito pull do próprio Docker Hub e a imagem do phpadmin que também é puxada do Docker Hub.
+
+> [!TIP]
+> A imagem phpadmin está presente para facilitar a visualização da tabela Products e alterar diretamente os valores no banco de dados. Depois que executar o script ./start.sh, acesse [localhost:8080](localhost:8080) que você terá está visualização da imagem:
+
+![phpadminImage](/assets/imgs/phpadmin.png)
+
+> [!WARNING]
+> O banco da aplicação se chama **nest** e a tabela se chama **Product**
+
 # Conslusão
 Após esse procedimento, o sistema estará pronto para ser acessado. Basta clonar e executar o repositório [Front-end](https://github.com/GabrielBezerraDev/loja_virtual-front_end).
 
