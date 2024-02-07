@@ -18,12 +18,12 @@ O desenvolvimento do projeto levou aproximadamente um mês, durante o qual busqu
 
 4. O usuário deve dá permissão de **Super user** no seu sistema para rodar o scripts shell com docker sem problema. Sugiro duas alternativas:
 
-  <ol>
+  <ol type=a>
     <li>
-      a) Criar uma instância do seu terminal e dá acesso de privilégios de usuário com o comando `sudo -i`.
+      Criar uma instância do seu terminal e dá acesso de privilégios de usuário com o comando `sudo -i`.
     </li>
     <li>
-      b) Dá privilégios de super user para o **Docker**.
+      Dá privilégios de super user para o **Docker**.
     </li>
   </ol>
 
