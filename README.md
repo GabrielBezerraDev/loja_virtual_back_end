@@ -60,6 +60,9 @@ Este projeto contém 3 imagens que gerenciam todo o back-end do sistema, a image
 > [!WARNING]
 > O banco da aplicação se chama **nest** e a tabela se chama **Product**.
 
+# Dica para brincar com os dados da aplicação com script shell
+Fique a vontade em fazer todas as operações de CRUD com os dados do sistema, pois os script shell foram seperados em funções para facilitar tal. Portanto, quando você quiser resetar os dados da aplicação para os dados padrões, não é necessário dá o **./start.sh** novamente, só é necessário executar o script **./mysql** no [diretório do script shell](./shell) e pronto! Dados resetados para os dados padrões! (Você pode visualizar os dados padrões da aplicação no diretório [db](./db), onde contém todos arquivos sql que são executados dentro da imagem do docker MySQL através do script [mysql.sh](./shell/mysql.sh)).
+
 # Conslusão
 Após esse procedimento, o sistema estará pronto para ser acessado. Basta clonar e executar o repositório [Front-end](https://github.com/GabrielBezerraDev/loja_virtual-front_end).
 
