@@ -40,6 +40,8 @@ Após instalar todas depêndencias do projeto, agora segue os passos para rodá-
 
 6. Após a conclusão do build das imagens e os containers no ar, execute `./start.sh` no seu terminal.
 
+7. Em determinado momento, irá aparecer está pergunta no terminal `Are you sure you want to reset your database? All data will be lost.`. Você digita "y" no seu teclado, pois o ORM prisma irá resetar as migrações do banco de dados para os dados originais dos scrips sql. 
+
 > [!WARNING]
 > Se o terminal acusar um erro relacionado ao **nest**, instale o nestjs pelo npm, com o comando no terminal `npm i @nestjs/core`.
 

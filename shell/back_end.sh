@@ -1,10 +1,9 @@
-#!/bin/bash
-docker exec -d backend bash -c "npx prisma migrate dev && npm run start:dev"
 
-sleep 10
+docker exec -it backend bash -c "npx prisma migrate reset"
+
+docker exec -d backend bash -c "npm run start:dev"
 
 chmod u+x mysql.sh
 
-# gnome-terminal -- bash -c "./mysql.sh; exec bash"
 ./mysql.sh
 

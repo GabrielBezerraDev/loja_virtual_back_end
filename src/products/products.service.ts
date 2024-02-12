@@ -22,6 +22,16 @@ export class ProductsService {
     return await this.prismaService.product.findMany();
   }
 
+  findByCategory(id:number){
+    return this.prismaService.product.findMany(
+      {
+        where: {
+          categoryId: id
+        }
+      }
+    )
+  }
+
   findOne(id: number) {
     return this.prismaService.product.findFirst({
       where: {

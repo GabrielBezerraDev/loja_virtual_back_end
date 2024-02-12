@@ -7,12 +7,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Category {
+  id Int @id @default(autoincrement())
+  category String
+  product Product[]
+}
+
 model Product {
   name        String
   id          Int     @id @default(autoincrement())
   price       Float
-  codeProduct String?
+  codeProduct String
   description String
   imgBase64   String  @db.LongText
-  category    String? @db.VarChar(255)
+  categoryId Int
+  category Category @relation(fields: [categoryId], references: [id])
 }
+
+

@@ -4,6 +4,6 @@ Content-Type: application/json
 {
     "name":"bola",
     "price":80,
-    "description":"Sapato daora"
+    "description":"Bola daora"
 }
 
