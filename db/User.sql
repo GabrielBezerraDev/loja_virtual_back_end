@@ -8,6 +8,6 @@ INSERT INTO User(
     token
 )VALUES
 (
-"bezerrag363@gmail.com",
-"ga17082002"
+"admin@gmail.com",
+"admin"
 );
