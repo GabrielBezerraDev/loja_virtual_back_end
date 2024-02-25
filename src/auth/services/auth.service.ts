@@ -20,13 +20,16 @@ export class AuthService {
         email: user.email
       }
     }).then(value => dbUser = value );
-    console.log(dbUser);
 
-    let payload = {
-      sub: user.email
+    if(dbUser && dbUser.token === user.token){
+      let payload = {
+        sub: user.email
+      }
+      console.log(this.jwt.sign(payload));
+      return this.jwt.sign(payload);
+    }else{
+      return null;
     }
-
-    console.log(this.jwt.sign(payload));
   }
 
 }

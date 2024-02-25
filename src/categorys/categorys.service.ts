@@ -12,6 +12,7 @@ export class CategorysService {
     return 'This action adds a new category';
   }
 
+  
   findAll() {
     return this.prismaService.category.findMany();
   }

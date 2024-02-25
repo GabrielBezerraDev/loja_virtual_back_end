@@ -9,7 +9,7 @@ import { JwtModule } from '@nestjs/jwt';
   providers: [AuthService, JwtStrategyService],
   imports: [JwtModule.register(
     {
-      secret: "your-256-bit-secret",
+      secret: "bananaFritaComFeijoada",
       signOptions: {
         expiresIn: "860s"
       }
